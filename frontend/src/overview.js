@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import React from 'react';
-import './App.css';
+import './overview.css';
 
-function App() {
+function overview() {
   const leagues = ['League 1', 'League 2', 'League 3', 'League 4']; // Sample league names
 
 
@@ -28,4 +28,4 @@ function App() {
   );
 }
 
-export default App;
+export default overview;
