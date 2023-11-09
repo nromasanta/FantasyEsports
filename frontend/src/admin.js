@@ -1,15 +1,15 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import React from 'react';
-import './overview.css';
+import './admin.css';
 
-function overview() {
+function Admin() {
   const leagues = ['League 1', 'League 2', 'League 3', 'League 4']; // Sample league names
 
 
   return (
 
     <div className="app-container">
-    <aside className="sidebar">
+    <aside className="sidebar-admin">
       <div className="site-icon"></div>
       <div className="admin-username"></div>
       <div className="statistics"></div>
@@ -28,4 +28,4 @@ function overview() {
   );
 }
 
-export default overview;
+export default Admin;

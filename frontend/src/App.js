@@ -1,19 +1,31 @@
 import React, { useState } from 'react';
-import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { Route, Routes } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import Admin from './admin';
+import './App.css';
+
+
 
 function App() {
-    const pages = ['Profile', 'Overview', 'Settings']; // Pages
+    const pages = ['Profile', 'Admin', 'Settings']; // Pages
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
     };
 
-    return (
+    const navigate = useNavigate();
+
+    const handleGoToAdmin = () => {
+        navigate('/admin');
+    };
+
+    return(
         <div>
             <nav className="navbar">
+                <button onClick = {handleGoToAdmin}>Admin Page</button>
                 <button className="login-button">Login</button>
                 <button className="signup-button">Sign Up</button>
             </nav>
@@ -27,10 +39,13 @@ function App() {
                     <button className="sidebar-toggle" onClick={toggleSidebar}>
                         <FontAwesomeIcon icon={faBars} />
                     </button>
-                    <h1>Welcome to My App</h1>
-                    <p>Discover a World of Possibilities</p>
+                    <h1>CSUB Esports</h1>
+                    <p>Placeholder</p>
                 </header>
                 <main className="main-content">
+                    <Routes>
+                        <Route path="/" element = {
+                    <>
                     <section className="about-section">
                         <h2>About Us</h2>
                         <p>
@@ -52,6 +67,10 @@ function App() {
                         <p>Sign in or create an account to unlock the full potential of our app.</p>
                         <button className="get-started-button">Get Started</button>
                     </section>
+                    </>
+                        } />
+                        <Route path = "/admin" element ={<Admin />}/>
+                    </Routes>
                 </main>
             </div>
         </div>
