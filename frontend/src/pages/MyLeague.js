@@ -1,8 +1,9 @@
 //import logo from './logo.svg';
 import React from 'react';
-import './admin.css';
+import './MyLeague.css';
 
-function Admin() {
+
+function MyLeague() {
   const leagues = ['League 1', 'League 2', 'League 3', 'League 4']; // Sample league names
 
 
@@ -22,10 +23,11 @@ function Admin() {
           <button className="edit-league"></button>
         </div>
       ))}
+
     </main>
   </div>
 
   );
 }
 
-export default Admin;
+export default MyLeague;

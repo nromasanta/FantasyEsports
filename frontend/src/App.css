@@ -5,6 +5,8 @@
     padding: 15px 15px;
   }
   
+  .home-button,
+  .admin-button,
   .login-button,
   .signup-button {
     background-color: gray;

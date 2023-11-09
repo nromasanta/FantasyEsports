@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { Route, Routes } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import Admin from './admin';
+import Admin from './pages/admin';
 import './App.css';
 
 
@@ -22,10 +22,15 @@ function App() {
         navigate('/admin');
     };
 
+    const handleGoToHome = () => {
+        navigate('/');
+    };
+
     return(
         <div>
             <nav className="navbar">
-                <button onClick = {handleGoToAdmin}>Admin Page</button>
+                <button className = "home-button" onClick = {handleGoToHome}>Home Page</button>
+                <button className = "admin-button" onClick = {handleGoToAdmin}>Admin Page</button>
                 <button className="login-button">Login</button>
                 <button className="signup-button">Sign Up</button>
             </nav>
@@ -49,8 +54,7 @@ function App() {
                     <section className="about-section">
                         <h2>About Us</h2>
                         <p>
-                            Welcome to our amazing application. We provide a wide range of features
-                            and services to make your life easier.
+                            Temporary front-end while we work on site functionality.
                         </p>
                     </section>
                     <section className="features-section">
@@ -64,7 +68,7 @@ function App() {
                     </section>
                     <section className="get-started-section">
                         <h2>Get Started</h2>
-                        <p>Sign in or create an account to unlock the full potential of our app.</p>
+                        <p>Potential welcome message placeholder</p>
                         <button className="get-started-button">Get Started</button>
                     </section>
                     </>
