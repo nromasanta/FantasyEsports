@@ -16,7 +16,7 @@ import {useNavigate} from 'react-router-dom';
 // 3.4 Import the page at the top of App.js 
 
 
-const PageNavigator = () => {
+const usePageNavigator = () => {
 
     // functionality from react-router-dom
     const navigate = useNavigate();
@@ -42,4 +42,4 @@ const PageNavigator = () => {
 
 };
 
-export default PageNavigator;
+export default usePageNavigator;

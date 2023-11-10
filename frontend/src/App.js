@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { Route, Routes } from 'react-router-dom';
 //import { useNavigate } from 'react-router-dom';
-import PageNavigator from './components/PageNavigator';
+import Navbar from './components/Navbar';
 import Admin from './pages/Admin';
 import League from './pages/League';
 import Login from './pages/Login';
@@ -23,19 +23,11 @@ function App() {
 
     // functions imported from ./components/PageNavigator
     // to add more pages, follow instructions in PageNavigator.js
-    const { handleGoToAdmin, handleGoToLeague, handleGoToLogin, handleGoToHome, 
-        handleGoToSignup, handleGoToProfile} = PageNavigator();
+
     
     return(
         <div>
-            <nav className="navbar">
-                <button className = "home-button" onClick = {handleGoToHome}>Home Page</button>
-                <button className = "profile-button" onClick = {handleGoToProfile}>Profile</button>
-                <button className = "admin-button" onClick = {handleGoToAdmin}>Admin Page</button>
-                <button className = "league-button" onClick = {handleGoToLeague}>League Page</button>
-                <button className = "login-button" onClick = {handleGoToLogin}>Login</button>
-                <button className = "signup-button" onClick = {handleGoToSignup}>Sign Up</button>
-            </nav>
+            <Navbar />
             <div className="container">
                 <aside className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
                     <div className="site-icon"></div>
