@@ -2,6 +2,7 @@
 import React from 'react';
 import './Profile.css';
 
+// User's profile
 
 
 function Profile() {

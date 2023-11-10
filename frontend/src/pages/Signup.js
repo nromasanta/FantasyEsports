@@ -2,7 +2,7 @@
 import React from 'react';
 import './Signup.css';
 
-
+// Signup page
 
 function Signup() {
 

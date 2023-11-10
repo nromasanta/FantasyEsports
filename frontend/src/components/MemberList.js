@@ -23,19 +23,19 @@
 // for example if I did <LeagueList leagues = {leagues} title = "All Leagues"/>
 // I can access the title by doing props.title 
 
-const LeagueList = (props) => {
+const MemberList = (props) => {
 
-    const leagues = props.leagues;
+    const members = props.members;
     
     return ( 
         <div className = "main-content">
-        {leagues.map((leagues) => (
-            <div key={leagues.id} className="league-item">
+        {members.map((members) => (
+            <div key={members.id} className="league-item">
               <span className="league-name">
-              {leagues.title}
+              {members.title}
               </span>
               <button className="edit-league"> 
-              View
+              Kick
               </button>
             </div>
           ))}
@@ -43,4 +43,4 @@ const LeagueList = (props) => {
      );
 }
  
-export default LeagueList;
+export default MemberList;

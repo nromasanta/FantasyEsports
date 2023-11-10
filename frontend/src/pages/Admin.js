@@ -1,11 +1,24 @@
 //import logo from './logo.svg';
-import React from 'react';
+import React, { useState } from 'react';
 //import { useNavigate } from 'react-router-dom';
+import MemberList from '../components/MemberList';
 import './admin.css';
+
+// This page is a league comissioner's dashboard
+// Here they can kick members from their league,
+// going to need invite functionality later
+
 
 
 function Admin() {
-  const leagues = ['League 1', 'League 2', 'League 3', 'League 4']; // Sample league names
+ 
+  const [members, setMembers] = useState([
+    { title: "Member 1", id: 1 },
+    { title: "Member 2", id: 2 },
+    { title: "Member 3", id: 3 },
+
+  ]); 
+
 
 
 
@@ -13,19 +26,13 @@ function Admin() {
 
     <div className="app-container">
     <aside className="sidebar-admin">
-      <div className="site-icon"></div>
-      <div className="admin-username"></div>
-      <div className="statistics"></div>
-      <div className="user-reports"></div>
+      <div className="site-icon"> (Placeholder) </div>
+      <div className="admin-username">(Placeholder)</div>
+      <div className="statistics"> (Placeholder) </div>
+      <div className="user-reports"> (Placeholder) </div>
     </aside>
     <main className="main-content">
-      {leagues.map((league, index) => (
-        <div key={index} className="league-item">
-          <span className="league-name"></span>
-          <button className="edit-league"></button>
-        </div>
-      ))}
-
+      <MemberList members = {members} />
     </main>
   </div>
 

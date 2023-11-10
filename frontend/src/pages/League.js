@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import './League.css';
 import LeagueList from '../components/LeagueList';
 
+// Page displaying all the active leagues on the application
+
 
 function League() {
 
@@ -11,7 +13,7 @@ function League() {
     { title: "League 2", id: 2 },
     { title: "League 3", id: 3 },
 
-  ]); // Sample league names
+  ]); 
 
   return (
 
@@ -25,17 +27,6 @@ function League() {
     <main className="main-content">
 
       <LeagueList leagues = {leagues}/>
-      {/*
-      {leagues.map((leagues) => (
-        <div key={leagues.id} className="league-item">
-          <span className="league-name">
-          {leagues.title}
-          </span>
-          <button className="edit-league"> 
-          View
-          </button>
-        </div>
-      ))} */}
 
     </main>
   </div>
