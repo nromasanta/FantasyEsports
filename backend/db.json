@@ -13,5 +13,19 @@
         "title": "Member 3",
          "id": 3 
     }
+   ],
+   "leagues": [
+    { 
+        "title": "Supa Dupa League", 
+        "id": 1 
+    },
+    { 
+        "title": "Lame League", 
+        "id": 2 
+    },
+    { 
+        "title": "Kinda OK League",
+         "id": 3 
+    }
    ]
 }

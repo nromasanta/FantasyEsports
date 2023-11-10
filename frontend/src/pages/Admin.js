@@ -1,5 +1,5 @@
 //import logo from './logo.svg';
-import React, { useState, useEffect } from 'react';
+//import React, { useState, useEffect } from 'react';
 //import { useNavigate } from 'react-router-dom';
 import MemberList from '../components/MemberList';
 import './admin.css';
@@ -37,7 +37,7 @@ function Admin() {
     </aside>
     <main className="main-content">
       { error && <div> { error } </div>}
-      { isPending && <div>Loading Data...</div>}
+      { isPending && <div> Loading Data...</div>}
       { members && <MemberList members = {members} />}
     </main>
   </div>

@@ -9,6 +9,7 @@ import League from './pages/League';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Profile from './pages/Profile';
+import MyLeague from './pages/MyLeague';
 import './App.css';
 
 
@@ -39,7 +40,7 @@ function App() {
                 </header>
                 <main className="main-content">
                     <Routes>
-                        <Route path="/" element = {
+                        <Route exact path="/" element = {
                     <>
                     <section className="about-section">
                         <h2>About Us</h2>
@@ -68,6 +69,7 @@ function App() {
                         <Route path = "/login" element = {<Login />} />
                         <Route path = "/signup" element = {<Signup />} />
                         <Route path = "/profile" element = {<Profile />} />
+						<Route path = "/myleague/:id" element = {<MyLeague />} />
                     </Routes>
                 </main>
             </div>

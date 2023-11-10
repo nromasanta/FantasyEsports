@@ -1,5 +1,5 @@
 //import React, { useState } from 'react';
-
+import { Link } from "react-router-dom";
 // HOW TO USE: 
 // 1. Create an array object that looks like this: 
 //-----------------------------------------
@@ -34,9 +34,11 @@ const LeagueList = (props) => {
               <span className="league-name">
               {leagues.title}
               </span>
+              <Link to = {`/myleague/${leagues.id}`}>
               <button className="edit-league"> 
               View
               </button>
+              </Link>
             </div>
           ))}
           </div>

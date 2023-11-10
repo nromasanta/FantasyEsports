@@ -31,6 +31,7 @@ const usePageNavigator = () => {
     const handleGoToLogin = () => navigate('/login');
     const handleGoToSignup = () => navigate('/signup');
     const handleGoToProfile = () => navigate('/profile');
+    const handleGoToMyLeague = () => navigate('/myleague');
     const handleGoToHome = () => navigate('/');
 
     return {
@@ -40,7 +41,8 @@ const usePageNavigator = () => {
         handleGoToLogin,
         handleGoToHome,
         handleGoToSignup,
-        handleGoToProfile
+        handleGoToProfile,
+        handleGoToMyLeague
     };
 
 };
