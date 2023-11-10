@@ -1,9 +1,9 @@
 //import logo from './logo.svg';
 import React from 'react';
-import './MyLeague.css';
+import './League.css';
 
 
-function MyLeague() {
+function League() {
   const leagues = ['League 1', 'League 2', 'League 3', 'League 4']; // Sample league names
 
 
@@ -30,4 +30,4 @@ function MyLeague() {
   );
 }
 
-export default MyLeague;
+export default League;
