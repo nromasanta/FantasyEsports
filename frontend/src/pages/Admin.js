@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 //import { useNavigate } from 'react-router-dom';
 import MemberList from '../components/MemberList';
 import './admin.css';
+import useFetch from '../components/useFetch';
 
 // This page is a league comissioner's dashboard
 // Here they can kick members from their league,
@@ -19,31 +20,9 @@ import './admin.css';
 
 
 function Admin() {
- 
-
-  const [members, setMembers] = useState(null);
-  const [isPending, setIsPending] = useState(true);
-  const [error, setError] = useState(null);
+  const { data: members, isPending, error } = useFetch('http://localhost:8000/members');
   
 
-  useEffect( () => {
-    fetch('http://localhost:8000/members')
-    .then(res => { 
-      if(!res.ok) {
-        throw Error('Failed to retrieve data');
-      }
-      return res.json();
-    })
-    .then (data => {
-      setMembers(data);
-      setIsPending(false);
-      setError(null);
-    })
-    .catch(err => {
-      setIsPending(false);
-      setError(err.message);
-    })
-  }, []);
 
 
 
