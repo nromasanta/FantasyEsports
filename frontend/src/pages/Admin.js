@@ -1,5 +1,5 @@
 //import logo from './logo.svg';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 //import { useNavigate } from 'react-router-dom';
 import MemberList from '../components/MemberList';
 import './admin.css';
@@ -8,17 +8,31 @@ import './admin.css';
 // Here they can kick members from their league,
 // going to need invite functionality later
 
+// IF ERROR:
+// Create a second terminal and run this alongside 
+// another terminal running `npm start`
+// 
+// Using a temporary json server to store mock data until
+// we get MongoDB up and running
+
+// npx json-server --watch ../backend/db.json --port 8000
 
 
 function Admin() {
  
-  const [members, setMembers] = useState([
-    { title: "Member 1", id: 1 },
-    { title: "Member 2", id: 2 },
-    { title: "Member 3", id: 3 },
 
-  ]); 
+  const [members, setMembers] = useState(null);
+  
+  useEffect( () => {
+    fetch('http://localhost:8000/members')
+    .then(res => { 
+      return res.json()
+    })
+    .then (data => {
+      setMembers(data)
 
+    })
+  }, []);
 
 
 
@@ -32,7 +46,7 @@ function Admin() {
       <div className="user-reports"> (Placeholder) </div>
     </aside>
     <main className="main-content">
-      <MemberList members = {members} />
+      {members && <MemberList members = {members} />}
     </main>
   </div>
 
