@@ -22,15 +22,26 @@ function Admin() {
  
 
   const [members, setMembers] = useState(null);
+  const [isPending, setIsPending] = useState(true);
+  const [error, setError] = useState(null);
   
+
   useEffect( () => {
     fetch('http://localhost:8000/members')
     .then(res => { 
-      return res.json()
+      if(!res.ok) {
+        throw Error('Failed to retrieve data');
+      }
+      return res.json();
     })
     .then (data => {
-      setMembers(data)
-
+      setMembers(data);
+      setIsPending(false);
+      setError(null);
+    })
+    .catch(err => {
+      setIsPending(false);
+      setError(err.message);
     })
   }, []);
 
@@ -46,7 +57,9 @@ function Admin() {
       <div className="user-reports"> (Placeholder) </div>
     </aside>
     <main className="main-content">
-      {members && <MemberList members = {members} />}
+      { error && <div> { error } </div>}
+      { isPending && <div>Loading Data...</div>}
+      { members && <MemberList members = {members} />}
     </main>
   </div>
 
