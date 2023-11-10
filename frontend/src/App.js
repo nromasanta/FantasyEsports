@@ -21,10 +21,6 @@ function App() {
         setIsSidebarOpen(!isSidebarOpen);
     };
 
-    // functions imported from ./components/PageNavigator
-    // to add more pages, follow instructions in PageNavigator.js
-
-    
     return(
         <div>
             <Navbar />

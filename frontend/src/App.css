@@ -15,9 +15,18 @@
     color: #fff;
     padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     margin-left: 10px;
     cursor: pointer;
+  }
+
+  .profile-button:hover,
+  .league-button:hover,
+  .home-button:hover,
+  .admin-button:hover,
+  .login-button:hover,
+  .signup-button:hover {
+    color:#f1356d;
   }
   
 .container {

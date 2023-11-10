@@ -27,24 +27,3 @@
     padding: 20px;
   }
   
-  .league-item {
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f0f0f0; /* Placeholder for actual content */
-    padding: 10px;
-  }
-  
-  
-  
-  
-  .league-name, .edit-league {
-    height: 20px; /* Placeholder for actual content */
-    width: 100px; /* Placeholder for actual content */
-    background-color: #e0e0e0; /* Placeholder for actual content */
-  }
-  
-  .edit-league {
-    cursor: pointer;
-  }

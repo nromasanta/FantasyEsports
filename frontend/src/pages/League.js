@@ -1,28 +1,41 @@
 //import logo from './logo.svg';
-import React from 'react';
+import React, { useState } from 'react';
 import './League.css';
+import LeagueList from '../components/LeagueList';
 
 
 function League() {
-  const leagues = ['League 1', 'League 2', 'League 3', 'League 4']; // Sample league names
 
+  const [leagues, setLeagues] = useState([
+    { title: "League 1", id: 1 },
+    { title: "League 2", id: 2 },
+    { title: "League 3", id: 3 },
+
+  ]); // Sample league names
 
   return (
 
     <div className="app-container">
     <aside className="sidebar-admin">
-      <div className="site-icon"></div>
-      <div className="admin-username"></div>
-      <div className="statistics"></div>
-      <div className="user-reports"></div>
+      <div className="site-icon">(Placeholder)</div>
+      <div className="admin-username">(Placeholder))</div>
+      <div className="statistics">(Placeholder)</div>
+      <div className="user-reports">(Placeholder)</div>
     </aside>
     <main className="main-content">
-      {leagues.map((league, index) => (
-        <div key={index} className="league-item">
-          <span className="league-name"></span>
-          <button className="edit-league"></button>
+
+      <LeagueList leagues = {leagues}/>
+      {/*
+      {leagues.map((leagues) => (
+        <div key={leagues.id} className="league-item">
+          <span className="league-name">
+          {leagues.title}
+          </span>
+          <button className="edit-league"> 
+          View
+          </button>
         </div>
-      ))}
+      ))} */}
 
     </main>
   </div>
